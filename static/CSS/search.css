@@ -1,0 +1,87 @@
+.container {
+  margin-top: 1rem;
+  display: flex;
+}
+
+.cards {
+  flex-wrap: wrap;
+  align-content: flex-start;
+  display: flex;
+}
+
+.checkBox {
+  min-width: 16rem;
+  margin-top: -1px;
+  position: sticky;
+  height: 100%;
+  top: 15px;
+}
+
+.checkBox fieldset {
+  margin-bottom: 8px;
+  border: 1px solid #3f3d3d;
+  border-radius: 6px;
+}
+
+.checkBox label {
+  color: rgb(208, 15, 24);
+}
+
+.checkBox input[checkbox] {
+  background-color: rgb(208, 15, 24);
+}
+
+.checkBox button {
+  margin-left: 3px;
+}
+
+.checkbox-wrapper:not(:last-child) {
+  margin-bottom: 4px;
+}
+
+.checkbox-wrapper {
+  display: flex;
+  width: 100%;
+}
+
+.checkbox-wrapper > input[checkbox] {
+  margin-right: 3px;
+}
+
+legend {
+  color: rgb(136, 9, 18);
+}
+
+.card {
+  background-color: #F8F9FB;
+  border-radius: 6px;
+  padding: 12px 20px;
+  margin: 8px;
+  width: 20rem;
+  min-width: 17rem;
+  position: relative;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.15), 0 2px 2px rgba(0,0,0,0.15), 0 4px 4px rgba(0,0,0,0.15), 0 8px 8px rgba(0,0,0,0.15)
+}
+
+.card .button-wrapper {
+  bottom: 1rem;
+  right: 1rem;
+  position: absolute;
+}
+
+.card p {
+  margin: 2px;
+  color: #000000;
+}
+
+.card p:last-child {
+  margin-bottom: 1rem;
+}
+
+.selected {
+  display: flex;
+}
+
+.selected p {
+  color: #d00f18;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="/static/CSS/style.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/CSS/table.css"/>
+    <title>Карточка читателя</title>
+    {% import "macros.html" as macros %}
+</head>
+<body>
+<div class=menu>
+    <ul>
+        <li class=active><a href={{ url_for("index") }}>Читатель</a></li>
+        <li><a href={{ url_for('book') }}>Книги</a></li>
+        <li><a href={{ url_for('statistics') }}>Статистика</a></li>
+    </ul>
+</div>
+<div class=block>
+    <p>
+    <form action='' method="get">
+        Читатель:
+        <!-- Создаем поле со списком с именем reader
+        (использовать макрос, созданный в ЛР 5 -->
+        {{ macros.render_readers(combo_box, reader_id, len) }}
+        <input type="submit" value="Найти">
+    </form>
+    </p>
+    </p>
+    <!-- Пока страница не создана, не указывать ее в action -->
+    <form action="{{ url_for('new_reader') }}" method="get">
+        <input type="submit" value="Новый читатель">
+    </form>
+    </p>
+    {{ macros.render_table("Карточка", book_reader, "book_reader_id", len) }}
+    </p>
+    <!-- Пока страница не создана, не указывать ее в action -->
+    <form action="{{ url_for('search') }}" method="get">
+         <input type="submit" value="Взять книгу">
+    </form>
+    </p>
+</div>
+
+</body>
+</html>

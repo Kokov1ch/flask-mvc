@@ -1,0 +1,36 @@
+.form-wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.content {
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border-color: rgb(180, 180, 180);
+}
+
+th, td {
+  padding: 8px;
+}
+
+.table-wrapper {
+  margin: 6px;
+}
+
+.table-name {
+  display: flex;
+  justify-content: center;
+}
+
+tr:nth-child(2n) {
+  background-color: rgb(242, 242, 242);
+}
